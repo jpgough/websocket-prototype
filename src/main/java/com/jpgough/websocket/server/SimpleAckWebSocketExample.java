@@ -17,5 +17,6 @@ public class SimpleAckWebSocketExample extends TextWebSocketHandler {
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
         super.afterConnectionEstablished(session);
+        System.out.println("Establishing Session: " + session);
     }
 }

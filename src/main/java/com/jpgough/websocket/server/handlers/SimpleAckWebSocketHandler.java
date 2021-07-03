@@ -1,4 +1,4 @@
-package com.jpgough.websocket.server;
+package com.jpgough.websocket.server.handlers;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.TextMessage;
@@ -6,7 +6,7 @@ import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 @Component
-public class SimpleAckWebSocketExample extends TextWebSocketHandler {
+public class SimpleAckWebSocketHandler extends TextWebSocketHandler {
 
     @Override
     protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {

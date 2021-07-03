@@ -1,4 +1,4 @@
-package com.jpgough.websocket.server;
+package com.jpgough.websocket.server.handlers;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.TextMessage;
@@ -8,7 +8,7 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 import java.util.Random;
 
 @Component
-public class LargeFileWebSocketExample extends TextWebSocketHandler {
+public class LargeFileWebSocketHandler extends TextWebSocketHandler {
 
     private Random random = new Random();
 

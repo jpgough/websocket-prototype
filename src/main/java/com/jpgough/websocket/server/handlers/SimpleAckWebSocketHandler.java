@@ -29,6 +29,9 @@ public class SimpleAckWebSocketHandler extends TextWebSocketHandler {
     @Override
     public void handleTransportError(WebSocketSession session, Throwable exception) throws Exception {
         super.handleTransportError(session, exception);
+        log.error("Session in error", session);
         log.error("Error occurred on transport", exception);
     }
+
+
 }

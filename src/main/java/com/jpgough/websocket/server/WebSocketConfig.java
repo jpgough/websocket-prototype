@@ -12,6 +12,7 @@ public class WebSocketConfig implements WebSocketConfigurer {
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry webSocketHandlerRegistry) {
         webSocketHandlerRegistry.addHandler(new LargeFileWebSocketHandler(), "/100mb");
+        webSocketHandlerRegistry.addHandler(new LargeFileWebSocketHandler(), "/1mb");
         webSocketHandlerRegistry.addHandler(new SimpleAckWebSocketHandler(), "/ack");
     }
 }

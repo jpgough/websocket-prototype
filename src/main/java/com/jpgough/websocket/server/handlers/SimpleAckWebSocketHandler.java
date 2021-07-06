@@ -15,7 +15,6 @@ public class SimpleAckWebSocketHandler extends TextWebSocketHandler {
 
     @Override
     protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
-        super.handleTextMessage(session, message);
         log.info("Received Message: [{}]", message.getPayload());
         session.sendMessage(new TextMessage("[" + message.getPayload() + "] Received.", true));
     }

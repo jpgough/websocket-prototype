@@ -24,6 +24,7 @@ public class SimpleAckWebSocketHandler extends TextWebSocketHandler {
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
         super.afterConnectionEstablished(session);
         log.info("Establishing Session: [{}]", session);
+        log.info("Size Limit on session: [{}]", session.getTextMessageSizeLimit());
     }
 
     @Override

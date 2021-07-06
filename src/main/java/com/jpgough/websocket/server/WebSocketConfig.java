@@ -13,9 +13,9 @@ public class WebSocketConfig implements WebSocketConfigurer {
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry webSocketHandlerRegistry) {
-        webSocketHandlerRegistry.addHandler(new LargeFileWebSocketHandler(), "/100mb");
-        webSocketHandlerRegistry.addHandler(new SmallFileWebSocketHandler(), "/1mb");
-        webSocketHandlerRegistry.addHandler(new SimpleAckWebSocketHandler(), "/ack");
-        webSocketHandlerRegistry.addHandler(new DevNullWebSocketHandler(), "/ignore");
+        webSocketHandlerRegistry.addHandler(new LargeFileWebSocketHandler(), "/100mb").setAllowedOrigins("*");
+        webSocketHandlerRegistry.addHandler(new SmallFileWebSocketHandler(), "/1mb").setAllowedOrigins("*");
+        webSocketHandlerRegistry.addHandler(new SimpleAckWebSocketHandler(), "/ack").setAllowedOrigins("*");
+        webSocketHandlerRegistry.addHandler(new DevNullWebSocketHandler(), "/ignore").setAllowedOrigins("*");
     }
 }

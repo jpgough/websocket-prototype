@@ -1,6 +1,9 @@
 package com.jpgough.websocket.server;
 
-import com.jpgough.websocket.server.handlers.*;
+import com.jpgough.websocket.server.handlers.DevNullWebSocketHandler;
+import com.jpgough.websocket.server.handlers.LargeFileWebSocketHandler;
+import com.jpgough.websocket.server.handlers.SimpleAckWebSocketHandler;
+import com.jpgough.websocket.server.handlers.SmallFileWebSocketHandler;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.config.annotation.*;
 
@@ -14,6 +17,5 @@ public class WebSocketConfig implements WebSocketConfigurer {
         webSocketHandlerRegistry.addHandler(new SmallFileWebSocketHandler(), "/1mb").setAllowedOrigins("*");
         webSocketHandlerRegistry.addHandler(new SimpleAckWebSocketHandler(), "/ack").setAllowedOrigins("*");
         webSocketHandlerRegistry.addHandler(new DevNullWebSocketHandler(), "/ignore").setAllowedOrigins("*");
-        webSocketHandlerRegistry.addHandler(new ShortBinarySocketHandler(), "/bin").setAllowedOrigins("*");
     }
 }
